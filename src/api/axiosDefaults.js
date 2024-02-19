@@ -1,6 +1,8 @@
-import axios from "axios";
-// import { AccordionCollapse } from "react-bootstrap";
+import axios from 'axios';
 
-axios.defaults.baseURL = 'https://moments-demo-a8aecd3f16e6.herokuapp.com/';
-axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'; // Correct property name
-axios.defaults.withCredentials = true; // Set withCredentials directly on axios.defaults
+axios.defaults.baseURL = 'https://django-rest-demo-1cfde67fddd7.herokuapp.com/';
+axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
+axios.defaults.withCredentials = true;
+
+// export const axiosReq = axios.create();
+// export const axiosRes = axios.create();
