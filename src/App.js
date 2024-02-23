@@ -5,24 +5,9 @@ import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import PostCreateForm from "./pages/posts/PostCreateForm";
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(null)
-
-  const handleMount = async () => {
-    try {
-      const {data} = await axios.get('dj-rest-auth/user/')
-      setCurrentUser(data)
-    } catch(err){
-      console.log(err)
-    }
-  }
-
-  useEffect(() => {
-    handleMount()
-  }, [])
 
   return (
     <div className={styles.App}>
@@ -32,6 +17,7 @@ function App() {
           <Route exact path="/" render={() => <h1>Home page</h1>} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route extrac path="/posts/create" render={() => <PostCreateForm />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
