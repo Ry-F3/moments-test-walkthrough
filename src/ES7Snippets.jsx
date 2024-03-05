@@ -42,4 +42,7 @@
 // }
 
 //clg
-console.log(first)
+// console.log(first)
+
+//clo
+console.log('first', first)
